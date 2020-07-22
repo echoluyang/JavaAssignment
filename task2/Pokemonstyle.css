@@ -1,0 +1,28 @@
+
+#pidgo {
+	background: #ffffe6;
+	
+}
+
+#bull {
+	background: #e6ffcc;
+	
+}
+
+#char {
+	background: #fff5cc;
+}
+
+#squi {
+	background: #ccffff;
+}
+
+h1 {
+    text-align: center;
+    color:#8585ad;
+    font-size:2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+   
+}
