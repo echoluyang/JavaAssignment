@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.hibernate.com.list.Grouppp" table="team">
+		<id name="id" column="group_id" type="long">
+			<generator class="native"/>
+		</id>
+
+		<property name="name" column="gname" type="java.lang.String"></property>
+		<map name="employees" table="employees" cascade="all">
+			<key column="id"></key>
+			<index column="employeeID" type="java.lang.String"></index>
+			<one-to-many class="com.hibernate.com.list.Employee"/>
+		</map>
+	</class>
+	
+	<class name="com.hibernate.com.list.Employee" table="empl">
+		<id name="eid" column="eid">
+			<!-- <generator class="increment"></generator> -->
+		</id>
+		<property name="name" column="ename"></property>
+		<property name="department"></property>
+	
+	</class>
+</hibernate-mapping>
